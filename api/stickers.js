@@ -54,7 +54,7 @@ router.post('/', (req, res, next)=>{
 
 })
 
-router.put('/:id',isValid, (req,res, next)=>{
+router.put('/:id',isValidId, (req,res, next)=>{
   if(validSticker(req.body)){
    queries.update(req.params.id, req.body).then(stickers=>{
 
